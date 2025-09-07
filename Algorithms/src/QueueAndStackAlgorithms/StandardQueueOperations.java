@@ -1,0 +1,24 @@
+package QueueAndStackAlgorithms;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class StandardQueueOperations {
+
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(2);
+        queue.add(3);
+        queue.add(19);
+        queue.add(23);
+
+        int removedItem = queue.remove();
+        System.out.println(removedItem);
+        System.out.println(queue.remove());
+        System.out.println(queue.peek());
+
+        while (!queue.isEmpty()){ //Otherwise NoSuchElementException
+            System.out.println(queue.remove());
+        }
+    }
+}
